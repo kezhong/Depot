@@ -1,0 +1,8 @@
+(in C:/Users/rzhong/Desktop/Rails/Depot/depot)
+    products GET    /products(.:format)          {:action=>"index", :controller=>"products"}
+             POST   /products(.:format)          {:action=>"create", :controller=>"products"}
+ new_product GET    /products/new(.:format)      {:action=>"new", :controller=>"products"}
+edit_product GET    /products/:id/edit(.:format) {:action=>"edit", :controller=>"products"}
+     product GET    /products/:id(.:format)      {:action=>"show", :controller=>"products"}
+             PUT    /products/:id(.:format)      {:action=>"update", :controller=>"products"}
+             DELETE /products/:id(.:format)      {:action=>"destroy", :controller=>"products"}
