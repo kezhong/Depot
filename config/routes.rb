@@ -1,15 +1,21 @@
 Depot::Application.routes.draw do
+  resources :orders
+
   resources :line_items
 
   resources :carts
 
   get "store/index"
 
-  resources :products
+  resources :products do
+    get :who_bought, :on => :member
+  end
   
   match "books" => "store#books", :as => 'books'
   match "music" => "store#music", :as => 'music'
   match "movies" => "store#movies", :as => 'movies'
+  match "search" => "store#search", :as => 'search'
+  match "find_products" => "store#find_products", :as => 'find_products'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
